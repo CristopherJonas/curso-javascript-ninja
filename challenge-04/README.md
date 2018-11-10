@@ -9,30 +9,32 @@ para o contrário.
 */
 var isTruthy = function(a){
 return !!a;
-}
+};
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
-isTruthy(NaN
-isTruthy(0)
-isTruthy(-0)
-isTruthy('')
-isTruthy("")
-isTruthy(undefined)
-isTruthy(null)
+isTruthy(NaN);
+isTruthy(false);
+isTruthy(0);
+isTruthy(-0);
+isTruthy('');
+isTruthy("");
+isTruthy(undefined);
+isTruthy(null);
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
-isTruthy(1)
-isTruthy('a')
-isTruthy("1")
-isTruthy(true)
-isTruthy("teste")
-isTruthy(10)
-isTruthy({})
-isTruthy([])
-isTruthy('-0')
-isTruthy([null])
+isTruthy(1);
+isTruthy('a');
+isTruthy("1");
+isTruthy(true);
+isTruthy("teste");
+isTruthy(10);
+isTruthy({});
+isTruthy([]);
+isTruthy('-0');
+isTruthy([null]);
+isTruthy(function(){});
 
 /*
 Declare uma variável chamada `carro`, atribuindo à ela um objeto com as

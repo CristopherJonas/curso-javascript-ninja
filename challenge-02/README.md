@@ -9,10 +9,10 @@ return x + y;
 }
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-var myvar = soma(1,2) + '5';
+var myvar = soma(1,2) + 5;
 
 // Qual o valor atualizado dessa variável?
-"35"
+8
 
 // Declare uma nova variável, sem valor.
 var novalue;
@@ -22,16 +22,16 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-function retornaValor(x){
-noValue = x;
+function retornaValor(){
+noValue = 25;
 return "O valor da variável agora é " + noValue;
 }
 
 // Invoque a função criada acima.
-retornaValor(10);
+retornaValor();
 
 // Qual o retorno da função? (Use comentários de bloco).
-/* "O valor da variável agora é 10" */
+/* "O valor da variável agora é 25" */
 
 /*
 Crie uma função com as seguintes características:
@@ -41,8 +41,8 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function mult(x,y,z){
-if(!x || !y || !z) return "Preencha todos os valores corretamente!";
-return (x * y * z) + 2;
+if(x === undefined || y === undefined || z === undefined) return "Preencha todos os valores corretamente!";
+return x * y * z + 2;
 }
 
 // Invoque a função criada acima, passando só dois números como argumento.
@@ -68,13 +68,9 @@ Crie uma função com as seguintes características:
 */
 function somaMaluca(x,y,z){
 if(x && !y && !z) return x;
-else if(!x && y && !z) return y;
-else if(!x && !y && z) return z;
 else if(x && y && !z) return x + y;
-else if(x && !y && z) return x + z;
-else if(!x && y && z) return y + z;
 else if(x && y && z) return (x + y)/z;
-else if (!x && !y && !z) return null;
+else if (!x && !y && !z) return false;
 else return null;
 }
 
@@ -82,5 +78,5 @@ else return null;
 somaMaluca(1); //1
 somaMaluca(1,2); //3
 somaMaluca(1,2,3); //1
-somaMaluca(); //null
+somaMaluca(); //false
 ```

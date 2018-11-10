@@ -16,7 +16,16 @@ As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
 - `andando` - Boolean - recebe "falso" por padrão
 - `caminhouQuantosMetros` - Number - recebe "zero" por padrão
 */
-var pessoa = {nome:"Cristopher", sobrenome:"Faria",sexo:"masculino",idade:33,altura:1.76,peso:85,andando:false,caminhouQuantosMetros:0}
+var pessoa = {
+nome:"Cristopher", 
+sobrenome:"Faria",
+sexo:"masculino",
+idade:33,
+altura:1.76,
+peso:85,
+andando:false,
+caminhouQuantosMetros:0
+};
 
 /*
 Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método deve
@@ -78,7 +87,9 @@ return "Eu peso " + pessoa.peso + "Kg."
 Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
-?
+pessoa.mostrarAltura = function (){
+return "Minha altura é " + pessoa.altura + "m."
+}
 
 /*
 Agora vamos brincar um pouco com o objeto criado:
@@ -103,7 +114,7 @@ pessoa.mostrarPeso(); //"Eu peso 85Kg."
 Qual a altura da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.altura . //1.76
+pessoa.mostrarAltura() . 
 
 /*
 Faça a `pessoa` fazer 3 aniversários.

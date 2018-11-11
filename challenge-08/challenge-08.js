@@ -5,7 +5,7 @@ desses parâmetros.
 */
 var sum = function calculateSum(a,b){
 return a + b;
-}
+};
 
 /*
 Invoque a função criada acima, passando dois números que serão somados, e mostre
@@ -61,10 +61,10 @@ function calculator(operacao){
 	return function(a,b){
 		var resultado = 0;
 		switch(operacao){
-    		case "+":
+    	case "+":
 				resultado = a + b;
 			break;
-            case "-":
+      case "-":
 				resultado = a - b;
 			break;
 			case "*":
@@ -76,7 +76,8 @@ function calculator(operacao){
 			case "%":
 				resultado = a % b;
 			break;
-            default: return "Operação inválida."
+      default: 
+      return "Operação inválida."
 		}
 		return "Resultado da operação: "+a+" "+operacao+" "+b+" = "+resultado+"."
 	};
